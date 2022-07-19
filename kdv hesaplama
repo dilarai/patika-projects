@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class kdv {
+    public static void main(String[] args){
+        double tutar, kdvOran, kdvTutarı, kdvliTutar;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ücret Tutarını Giriniz : ");
+        tutar= input.nextDouble();
+        
+        if( tutar < 1000 && tutar >= 0){
+            kdvOran = 0.18;
+            kdvTutarı= tutar*kdvOran;
+            kdvliTutar= tutar + kdvTutarı;
+            System.out.println("Kdv'siz tutar : " + tutar);
+            System.out.println("Kdv oranı : " + kdvOran);
+            System.out.println("Kdv tutarı : " + kdvTutarı);
+            System.out.println("Kdv'li tutar : " + kdvliTutar);
+        }
+        else if (tutar >= 1000){
+            kdvOran = 0.08;
+            kdvTutarı= tutar*kdvOran;
+            kdvliTutar= tutar + kdvTutarı;
+            System.out.println("Kdv'siz tutar : " + tutar);
+            System.out.println("Kdv oranı : " + kdvOran);
+            System.out.println("Kdv tutarı : " + kdvTutarı);
+            System.out.println("Kdv'li tutar : " + kdvliTutar);
+        }
+
+        else{
+            System.out.print("Tutar negatif olamaz.");
+        }
+
+
+    }
+}
