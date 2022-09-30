@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class UserCheck {
+    public static void main(String[] args) {
+        String userName, password, newpass;
+        int check;
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Kullanıcı adını giriniz:");
+        userName = scan.nextLine();
+        System.out.print("Kullanıcı adını giriniz:");
+        password = scan.nextLine();
+
+        if (userName.equals("patika") && password.equals("java123")) {
+            System.out.println("Giriş yaptınız");
+        } else {
+            System.out.println("Şifre sıfırlansın mı? 1-Evet 2-Hayır");
+            check = scan.nextInt();
+            if (check == 1) {
+                System.out.println("Yeni şifre giriniz:");
+                scan.nextLine();
+                newpass = scan.nextLine();
+                if (newpass.equals(password) || newpass.equals("java123")) {
+                    System.out.println("Şifre oluşturulamadı");
+                } else {
+                    System.out.println("Şifre oluşturuldu");
+                }
+            } else {
+                System.out.println("Tekrar deneyiniz:");
+            }
+        }
+    }
+}
